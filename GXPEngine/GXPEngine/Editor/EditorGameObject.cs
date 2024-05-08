@@ -123,6 +123,7 @@ namespace GXPEngine.Editor.Exclusives
         {
             if (this == ((SceneEditor)game).selectedGameobject)
                 _texture = Texture2D.GetInstance("editor/SelectedMarker.png");
+            else if(this == (game as SceneEditor).hoveredObject) _texture = Texture2D.GetInstance("editor/HoveredMarker.png");
             else _texture = Texture2D.GetInstance("editor/ProxyLogo.png");
             
             Vector3 baseScale = scaleXYZ;
